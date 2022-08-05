@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "934899718388",
+    "project_id": "anime-snack",
+    "storage_bucket": "anime-snack.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934899718388:android:6003413fd51fe91cf9a6a1",
+        "android_client_info": {
+          "package_name": "com.example.anime_guia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934899718388-8f0ljb8ir7a4nm2hriuc2af8kjbc47f5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNveJWxAMbVxAXA5w423qu-d7d98It9MQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934899718388-8f0ljb8ir7a4nm2hriuc2af8kjbc47f5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
