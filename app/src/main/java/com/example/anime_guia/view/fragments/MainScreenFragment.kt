@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.anime_guia.R
+import com.example.anime_guia.databinding.FragmentMainScreenBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,6 +23,11 @@ class MainScreenFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private var Fragmentbinding: FragmentMainScreenBinding? = null
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = Fragmentbinding!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -33,9 +39,11 @@ class MainScreenFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+        Fragmentbinding = FragmentMainScreenBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main_screen, container, false)
     }
 
     companion object {
