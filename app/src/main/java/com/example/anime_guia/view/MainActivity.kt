@@ -31,12 +31,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun setMainTabsFeatures(tabId:TabLayout.Tab, position:Int){
         when (position){
-            0 -> {tabId.text = "Más\nVistos"
+            0 -> {tabId.text = "Más Vistos"
                 tabId.setIcon(R.drawable.ic_populars_icon)}
             1-> {tabId.text = "Favoritos"
                 tabId.setIcon(R.drawable.ic_favs_icon)
             }
-            2 -> {tabId.text = "Mejor\nCalificados"
+            2 -> {tabId.text = "Recomendados"
                 tabId.setIcon(R.drawable.ic_best_rating_icon)}
             3 -> {tabId.text = "Genéros"
                 tabId.setIcon(R.drawable.ic_types_icon)}
