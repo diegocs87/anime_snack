@@ -40,11 +40,11 @@ class MainScreenFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        val view = binding.root
         Fragmentbinding = FragmentMainScreenBinding.inflate(inflater, container, false)
         arguments?.takeIf { it.containsKey(ARG_OBJECT) }?.apply {
-            Fragmentbinding!!.fragment1tv.text = "freagment id: " + getInt(ARG_OBJECT).toString()
+            //Fragmentbinding!!.fragment1tv.text = "freagment id: " + getInt(ARG_OBJECT).toString()
         }
-        val view = binding.root
         return view
         // Inflate the layout for this fragment
     }
