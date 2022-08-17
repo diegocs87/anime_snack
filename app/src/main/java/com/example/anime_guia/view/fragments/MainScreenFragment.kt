@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.anime_guia.R
 import com.example.anime_guia.databinding.FragmentMainScreenBinding
+import com.example.anime_guia.model.Anime
+import com.example.anime_guia.view.adapters.MainRecyclerAdapter
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +28,7 @@ class MainScreenFragment : Fragment() {
     private var Fragmentbinding: FragmentMainScreenBinding? = null
     // This property is only valid between onCreateView and
     // onDestroyView.
-    private val binding get() = Fragmentbinding!!
+    //private val binding get() = Fragmentbinding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,12 +42,19 @@ class MainScreenFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val view = binding.root
+        //val view = binding.root
         Fragmentbinding = FragmentMainScreenBinding.inflate(inflater, container, false)
+        Fragmentbinding!!.mainScreenRecycler.adapter = MainRecyclerAdapter(
+            listOf(
+                Anime("One piece", "accion","hola","5"),
+                Anime("Fairy Tail", "aventura","hola","4"),
+                Anime("Death Note", "Drama","hola","4")
+            )
+        );
         arguments?.takeIf { it.containsKey(ARG_OBJECT) }?.apply {
             //Fragmentbinding!!.fragment1tv.text = "freagment id: " + getInt(ARG_OBJECT).toString()
         }
-        return view
+        return Fragmentbinding!!.root
         // Inflate the layout for this fragment
     }
 

@@ -7,23 +7,34 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.inflate
 import com.example.anime_guia.R
+import com.example.anime_guia.databinding.AnimeCardViewItemBinding
+import com.example.anime_guia.databinding.FragmentMainScreenBinding
 import com.example.anime_guia.model.Anime
 
-class MainRecyclerAdapter(private val animes : List<Anime>) : Adapter<MainRecyclerAdapter.viewHolder>() {
+class MainRecyclerAdapter(private val animes : List<Anime>) : Adapter<MainRecyclerAdapter.CardHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
-        return viewHolder(LayoutInflater.from(parent.context).
-        inflate(R.layout.anime_card_view_item, parent, false))
+    lateinit var cardViewItemBinding:AnimeCardViewItemBinding;
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardHolder {
+        cardViewItemBinding = AnimeCardViewItemBinding.inflate(LayoutInflater.from(parent.context),
+            parent, false);
+        return CardHolder(cardViewItemBinding);
     }
 
-    override fun onBindViewHolder(holder: viewHolder, position: Int) {
-        TODO("Not yet implemented")
+    override fun onBindViewHolder(cardholder: CardHolder, position: Int) {
+        cardholder.setAnimeDataCard(animes[position])
     }
 
     override fun getItemCount(): Int = animes.size
 
-    class viewHolder(view : View): RecyclerView.ViewHolder(view) {
+    class CardHolder(private val cardViewBinding: AnimeCardViewItemBinding):
+        RecyclerView.ViewHolder(cardViewBinding.root) {
 
+        fun setAnimeDataCard (animeId: Anime){
+            cardViewBinding.tvDate.text = animeId.score
+            cardViewBinding.tvTitle.text = animeId.tittle
+            cardViewBinding.tvCategory.text = animeId.kind
+        }
     }
 
 }
