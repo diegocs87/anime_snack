@@ -31,9 +31,9 @@ class MainRecyclerAdapter(private val animes : List<Anime>) : Adapter<MainRecycl
         RecyclerView.ViewHolder(cardViewBinding.root) {
 
         fun setAnimeDataCard (animeId: Anime){
-            cardViewBinding.tvDate.text = animeId.score
-            cardViewBinding.tvTitle.text = animeId.tittle
-            cardViewBinding.tvCategory.text = animeId.kind
+            cardViewBinding.animeTittle.text = animeId.tittle
+            cardViewBinding.kindTV.text = animeId.kind
+            cardViewBinding.capitulostv.text = animeId.score
         }
     }
 
