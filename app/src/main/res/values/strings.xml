@@ -2,4 +2,24 @@
     <string name="app_name">anime_guia</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Errors -->
+    <string name="error_no_available_data">No available data for the moment.</string>
+    <string name="error_no_character_data">There is no data related to this character.</string>
+
+    <!-- Menus -->
+    <string name="menu_navigation_list">List</string>
+    <string name="menu_navigation_favorites">Favorites</string>
+
+    <!-- Sections -->
+    <string name="section_status">Status</string>
+    <string name="section_episodes">Episodes</string>
+    <string name="section_genres">Genres</string>
+    <string name="section_studios">studios</string>
+    <string name="section_synopsis">Synopsis</string>
+    <string name="section_score">Score</string>
+    <string name="section_ranked">Ranked</string>
+
+    <!-- Titles -->
+    <string name="title_character_detail_activity">Character Detail</string>
 </resources>
