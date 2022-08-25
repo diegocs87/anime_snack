@@ -2,8 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:bind="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    >
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -50,7 +49,7 @@
                                 android:scaleType="centerCrop"
                                 app:layout_constraintTop_toBottomOf="@id/AnimeTittleTV"
                                 app:layout_constraintStart_toStartOf="parent"
-                                tools:src="@drawable/descarga" />
+                                android:src="@drawable/descarga" />
 
                             <TextView
                                 android:id="@+id/AnimeTittleTV"
@@ -59,7 +58,7 @@
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="@id/AnimeCover"
                                 app:layout_constraintTop_toTopOf="parent"
-                                tools:text="Kimetsu no Yaiba" />
+                                android:text="Kimetsu no Yaiba" />
 
                             <TextView
                                 android:id="@+id/animeStatusTittle"
@@ -76,7 +75,7 @@
                                 app:layout_constraintEnd_toEndOf="@id/animeStatusTittle"
                                 app:layout_constraintStart_toStartOf="@id/animeStatusTittle"
                                 app:layout_constraintTop_toBottomOf="@id/animeStatusTittle"
-                                tools:text="Currently Airing" />
+                                android:text="Currently Airing" />
 
                             <TextView
                                 android:id="@+id/animeEpisodesTittle"
@@ -92,7 +91,7 @@
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf ="@id/AnimeCover"
                                 app:layout_constraintTop_toBottomOf="@id/animeEpisodesTittle"
-                                tools:text="13" />
+                                android:text="13" />
 
                             <TextView
                                 android:id="@+id/animeGenreTittle"
@@ -108,7 +107,7 @@
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf ="@id/AnimeCover"
                                 app:layout_constraintTop_toBottomOf="@id/animeGenreTittle"
-                                tools:text="Action, Fantasy, Supernatural" />
+                                android:text="Action, Fantasy, Supernatural" />
 
                             <TextView
                                 android:id="@+id/animeStudiosTittle"
@@ -124,7 +123,7 @@
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf ="@id/AnimeCover"
                                 app:layout_constraintTop_toBottomOf="@id/animeStudiosTittle"
-                                tools:text="Madhouse" />
+                                android:text="Madhouse" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -140,7 +139,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/parentOrigin"
-                        style="@style/CharacterDetailLocationSectionCard"
+                        style="@style/AnimeDetailRankedSectionCard"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/character_detail_location_height"
                         android:layout_marginStart="8dp"
@@ -153,7 +152,7 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_margin="8dp"
                             android:orientation="vertical">
 
@@ -162,8 +161,8 @@
                                 android:text="@string/section_score" />
 
                             <TextView
-                                style="@style/CharacterDetailLocationSectionBody"
-                                tools:text="8.5" />
+                                style="@style/AnimeDetailSynopsisSectionBody"
+                                android:text="8.5" />
 
                         </LinearLayout>
 
@@ -171,7 +170,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/parentLocation"
-                        style="@style/CharacterDetailLocationSectionCard"
+                        style="@style/AnimeDetailRankedSectionCard"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/character_detail_location_height"
                         android:layout_marginEnd="8dp"
@@ -184,7 +183,7 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_margin="8dp"
                             android:orientation="vertical">
 
@@ -193,8 +192,8 @@
                                 android:text="@string/section_ranked" />
 
                             <TextView
-                                style="@style/CharacterDetailLocationSectionBody"
-                                tools:text="211" />
+                                style="@style/AnimeDetailSynopsisSectionBody"
+                                android:text="211" />
 
                         </LinearLayout>
 
@@ -223,11 +222,11 @@
                             style="@style/CharacterDetailSectionTitle"
                             android:text="@string/section_synopsis" />
 
-                        <ProgressBar
-                            android:id="@+id/episodeProgressBar"
-                            android:layout_width="wrap_content"
+                        <TextView
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center" />
+                            style="@style/AnimeDetailSynopsisSectionBody"
+                            android:text="@string/synopsis_test" />
+
 
                         <!--                        <androidx.recyclerview.widget.RecyclerView-->
                         <!--                            android:id="@+id/rvEpisodeList"-->
