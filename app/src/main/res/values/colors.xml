@@ -14,4 +14,5 @@
     <color name="colorTransparentFavorite">#A70A62</color>
     <color name="colorTransparentAccent">#BB0099CC</color>
     <color name="lightGray">#E7E7E7</color>
+    <color name="darkerGray">#6E6E6E</color>
 </resources>
