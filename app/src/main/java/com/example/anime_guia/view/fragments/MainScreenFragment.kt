@@ -1,13 +1,14 @@
 package com.example.anime_guia.view.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.anime_guia.R
 import com.example.anime_guia.databinding.FragmentMainScreenBinding
 import com.example.anime_guia.model.Anime
+import com.example.anime_guia.view.ShowAnimeDetailActivity
 import com.example.anime_guia.view.adapters.MainRecyclerAdapter
 
 // TODO: Rename parameter arguments, choose names that match
@@ -50,12 +51,19 @@ class MainScreenFragment : Fragment() {
                 Anime("Fairy Tail", "aventura","hola","4"),
                 Anime("Death Note", "Drama","hola","4")
             )
-        );
+        ) { anime ->
+            navigateTo(anime)
+        };
         arguments?.takeIf { it.containsKey(ARG_OBJECT) }?.apply {
             //Fragmentbinding!!.fragment1tv.text = "freagment id: " + getInt(ARG_OBJECT).toString()
         }
         return Fragmentbinding!!.root
         // Inflate the layout for this fragment
+    }
+
+    private fun navigateTo(anime: Anime){
+        val intent = Intent(context, ShowAnimeDetailActivity::class.java)
+        startActivity(intent)
     }
 
     companion object {
