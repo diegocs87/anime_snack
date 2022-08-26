@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
+import com.bumptech.glide.Glide
 import com.example.anime_guia.databinding.AnimeCardViewItemBinding
 import com.example.anime_guia.model.Anime
 
@@ -32,7 +33,11 @@ class MainRecyclerAdapter(private val animes: List<Anime>, private val animeItem
             cardViewBinding.animeTittle.text = animeId.tittle
             cardViewBinding.kindTV.text = animeId.kind
             cardViewBinding.capitulostv.text = animeId.score
+            Glide
+                .with(cardViewBinding.root.context)
+                .load(animeId.cover)
+                .centerCrop()
+                .into(cardViewBinding.imgAnime);
         }
     }
-
 }

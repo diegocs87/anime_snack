@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cvCoupon"
+    android:id="@+id/cvAnime"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="10dp"
@@ -27,7 +27,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imgCoupon"
+            android:id="@+id/imgAnime"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_marginStart="24dp"
