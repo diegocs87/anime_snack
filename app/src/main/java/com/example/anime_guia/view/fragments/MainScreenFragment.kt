@@ -47,7 +47,7 @@ class MainScreenFragment : Fragment() {
         Fragmentbinding = FragmentMainScreenBinding.inflate(inflater, container, false)
         Fragmentbinding!!.mainScreenRecycler.adapter = MainRecyclerAdapter(
             listOf(
-                Anime("One piece", "accion","https://cdn.myanimelist.net/images/anime/1223/96541.jpg","5"),
+                Anime("Fullmetal Alchemist: Brotherhood", " Action, Adventure, Drama, Fantasy","https://cdn.myanimelist.net/images/anime/1223/96541.jpg","#10"),
                 Anime("Fairy Tail", "aventura","hola","4"),
                 Anime("Death Note", "Drama","hola","4")
             )

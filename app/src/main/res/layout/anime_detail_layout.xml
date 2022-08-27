@@ -59,7 +59,7 @@
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="@id/AnimeCover"
                                 app:layout_constraintTop_toTopOf="parent"
-                                android:text="Kimetsu no Yaiba" />
+                                android:text="Fullmetal Alchemist: Brotherhood" />
 
                             <TextView
                                 android:id="@+id/animeStatusTittle"
@@ -76,7 +76,7 @@
                                 app:layout_constraintEnd_toEndOf="@id/animeStatusTittle"
                                 app:layout_constraintStart_toStartOf="@id/animeStatusTittle"
                                 app:layout_constraintTop_toBottomOf="@id/animeStatusTittle"
-                                android:text="Currently Airing" />
+                                android:text="Finished Airing" />
 
                             <TextView
                                 android:id="@+id/animeEpisodesTittle"
@@ -92,7 +92,7 @@
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf ="@id/AnimeCover"
                                 app:layout_constraintTop_toBottomOf="@id/animeEpisodesTittle"
-                                android:text="13" />
+                                android:text="64" />
 
                             <TextView
                                 android:id="@+id/animeGenreTittle"
@@ -108,7 +108,7 @@
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf ="@id/AnimeCover"
                                 app:layout_constraintTop_toBottomOf="@id/animeGenreTittle"
-                                android:text="Action, Fantasy, Supernatural, otro" />
+                                android:text="Action, Adventure, Drama, Fantasy" />
 
                             <TextView
                                 android:id="@+id/animeStudiosTittle"
@@ -124,49 +124,9 @@
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf ="@id/AnimeCover"
                                 app:layout_constraintTop_toBottomOf="@id/animeStudiosTittle"
-                                android:text="Madhouse" />
+                                android:text="Bones" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    card_view:cardCornerRadius="10dp"
-                    card_view:cardElevation="5dp"
-                    card_view:cardUseCompatPadding="true"
-                    app:cardBackgroundColor= "@color/lightGray">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="8dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/AnimeDetailSectionTitle"
-                            android:text="@string/section_synopsis" />
-
-                        <com.google.android.youtube.player.YouTubePlayerView
-                            android:id="@+id/youtubePlayer"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            />
-
-
-                        <!--                        <androidx.recyclerview.widget.RecyclerView-->
-                        <!--                            android:id="@+id/rvEpisodeList"-->
-                        <!--                            android:layout_width="match_parent"-->
-                        <!--                            android:layout_height="wrap_content"-->
-                        <!--                            android:orientation="vertical"-->
-                        <!--                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
-                        <!--                            tools:itemCount="8"-->
-                        <!--                            tools:listitem="@layout/item_list_episode" />-->
 
                     </LinearLayout>
 
@@ -205,7 +165,7 @@
 
                             <TextView
                                 style="@style/AnimeDetailRankSectionBody"
-                                android:text="8.5" />
+                                android:text="9.1" />
 
                         </LinearLayout>
 
@@ -237,13 +197,43 @@
 
                             <TextView
                                 style="@style/AnimeDetailRankSectionBody"
-                                android:text="#211" />
+                                android:text="#10" />
 
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    card_view:cardCornerRadius="10dp"
+                    card_view:cardElevation="5dp"
+                    card_view:cardUseCompatPadding="true"
+                    app:cardBackgroundColor= "@color/lightGray">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/AnimeDetailSectionTitle"
+                            android:text="@string/section_trailer" />
+
+                        <com.google.android.youtube.player.YouTubePlayerView
+                            android:id="@+id/youtubePlayer"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
 
                 <!-- Episode List Section -->
 
@@ -252,6 +242,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="20dp"
                     card_view:cardCornerRadius="10dp"
                     card_view:cardElevation="5dp"
                     card_view:cardUseCompatPadding="true"

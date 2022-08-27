@@ -17,6 +17,7 @@
     <string name="section_genres">Genres</string>
     <string name="section_studios">studios</string>
     <string name="section_synopsis">Synopsis</string>
+    <string name="section_trailer">Trailer</string>
     <string name="section_score">Score</string>
     <string name="section_ranked">Ranked</string>
 
