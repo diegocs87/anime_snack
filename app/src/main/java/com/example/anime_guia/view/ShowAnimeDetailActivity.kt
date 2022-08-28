@@ -3,7 +3,9 @@ package com.example.anime_guia.view
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.bumptech.glide.Glide
+import com.example.anime_guia.R
 import com.example.anime_guia.databinding.AnimeDetailLayoutBinding
 import com.google.android.youtube.player.YouTubeBaseActivity
 import com.google.android.youtube.player.YouTubeInitializationResult

@@ -287,7 +287,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            app:backgroundTint="@color/colorAccent"
+            android:src="@drawable/ic_fav_border"
+            app:backgroundTint="@color/teal_700"
             app:layout_anchor="@id/parent"
             app:layout_anchorGravity="bottom|end"
             app:tint="@android:color/white" />
