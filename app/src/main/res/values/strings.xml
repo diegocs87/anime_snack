@@ -2,4 +2,27 @@
     <string name="app_name">anime_guia</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Errors -->
+    <string name="error_no_available_data">No available data for the moment.</string>
+    <string name="error_no_character_data">There is no data related to this character.</string>
+
+    <!-- Menus -->
+    <string name="menu_navigation_list">List</string>
+    <string name="menu_navigation_favorites">Favorites</string>
+
+    <!-- Sections -->
+    <string name="section_status">Status</string>
+    <string name="section_episodes">Episodes</string>
+    <string name="section_genres">Genres</string>
+    <string name="section_studios">studios</string>
+    <string name="section_synopsis">Synopsis</string>
+    <string name="section_trailer">Trailer</string>
+    <string name="section_score">Score</string>
+    <string name="section_ranked">Ranked</string>
+
+    <!-- Titles -->
+    <string name="title_anime_detail_activity">Anime Detail</string>
+
+    <string name="synopsis_test"> E-Rantel,the capital city of the newly established Sorcerer Kingdom, suffers from a dire shortage of goods. Once a prosperous city known for its trade, it now faces a crisis due to its caution—or even fear—of its king, Ainz Ooal Gown. To make amends, Ainz sends Albedo to the city as a diplomatic envoy.Meanwhile, the cardinals of the Slane Theocracy discuss how to retaliate against Ainz after his attack crippled the Re-Estize Kingdoms army, plotting for the Baharuth Empire to take over the Sorcerer Kingdom. However, when Emperor Jircniv Rune Farlord El Nix arranges a meeting with the Theocracys messengers at a colosseum, he is confronted by none other than Ainz himself.With their secret gathering now out in the open, the emperor and his guests learn that Ainz has challenged the Warrior King, the empires greatest fighter, to a duel. With Ainzs motivations beyond his comprehension, Jircniv can do nothing but watch as humanitys future changes before his very eyes.</string>
 </resources>
