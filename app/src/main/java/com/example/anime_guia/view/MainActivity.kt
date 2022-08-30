@@ -20,10 +20,10 @@ class MainActivity : AppCompatActivity() {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
         mainBinding.mainPager.adapter = mainPagerAdapter
-        setTabLayouMediator()
+        setTabLayoutMediator()
     }
 
-    private fun setTabLayouMediator(){
+    private fun setTabLayoutMediator(){
         TabLayoutMediator(mainBinding.mainTabLayout, mainBinding.mainPager) { tabId, position ->
             setMainTabsFeatures(tabId,position)
         }.attach()
