@@ -46,11 +46,7 @@ class MainScreenFragment : Fragment() {
         //val view = binding.root
         Fragmentbinding = FragmentMainScreenBinding.inflate(inflater, container, false)
         Fragmentbinding!!.mainScreenRecycler.adapter = MainRecyclerAdapter(
-            listOf(
-                Anime("Fullmetal Alchemist: Brotherhood", " Action, Adventure, Drama, Fantasy","https://cdn.myanimelist.net/images/anime/1223/96541.jpg","#10"),
-                Anime("Fairy Tail", "aventura","hola","4"),
-                Anime("Death Note", "Drama","hola","4")
-            )
+            getAnimeList()
         ) { anime ->
             navigateTo(anime)
         };
@@ -64,6 +60,15 @@ class MainScreenFragment : Fragment() {
     private fun navigateTo(anime: Anime){
         val intent = Intent(context, ShowAnimeDetailActivity::class.java)
         startActivity(intent)
+    }
+
+    private fun getAnimeList(): List<Anime>{
+        var aniList = listOf(
+            Anime("Fullmetal Alchemist: Brotherhood", " Action, Adventure, Drama, Fantasy","https://cdn.myanimelist.net/images/anime/1223/96541.jpg","#10"),
+            Anime("Fairy Tail", "aventura","hola","4"),
+            Anime("Death Note", "Drama","hola","4")
+        )
+        return aniList
     }
 
     companion object {
