@@ -5,7 +5,7 @@ import android.os.Bundle
 import com.example.anime_guia.databinding.ActivityMainBinding
 import com.example.anime_guia.view.adapters.MainPagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
-import com.example.anime_guia.R;
+import com.example.anime_guia.R
 import com.google.android.material.tabs.TabLayout
 
 //import com.google.firebase.database.*
