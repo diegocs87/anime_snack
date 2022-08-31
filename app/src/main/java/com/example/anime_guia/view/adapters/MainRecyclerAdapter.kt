@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.bumptech.glide.Glide
 import com.example.anime_guia.databinding.AnimeCardViewItemBinding
-import com.example.anime_guia.model.Anime
 
 class MainRecyclerAdapter(private val animes: List<Anime>, private val animeItemClickedListener: (Anime) -> Unit) : Adapter<MainRecyclerAdapter.CardHolder>() {
 
