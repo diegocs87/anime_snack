@@ -1,11 +1,11 @@
 package com.example.anime_guia.model.network
 
-import com.example.anime_guia.model.TestApiData
+import com.example.anime_guia.model.AnimeAPIData
 import retrofit2.Call
 import retrofit2.http.GET
 
 interface AnimeAPIService {
 
-    @GET(".json")
-    fun getTopAnimeList(): Call<TestApiData>
+    @GET("top/anime")
+    fun getTopAnimeList(): Call<AnimeAPIData>
 }

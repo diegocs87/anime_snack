@@ -59,7 +59,7 @@ class MainScreenFragment : Fragment() {
             val res = MovieAPIBuilder.service.getTopAnimeList()
             val body = res.execute().body()
             if(body != null){
-                
+                println("body no null size:" +body.data.size)
             }
             else{
                 println("body null")
