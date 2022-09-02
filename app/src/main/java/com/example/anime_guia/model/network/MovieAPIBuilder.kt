@@ -7,8 +7,7 @@ import retrofit2.create
 object MovieAPIBuilder {
 
     fun retrofitObjectBulder() : Retrofit = Retrofit.Builder().
-    baseUrl("https://api.jikan.moe/v4/").
+    baseUrl("https://anime-snack-default-rtdb.firebaseio.com/").
     addConverterFactory(GsonConverterFactory.create()).build()
-
     val service = retrofitObjectBulder().create(AnimeAPIService::class.java)
 }

@@ -59,7 +59,7 @@ class MainScreenFragment : Fragment() {
             val res = MovieAPIBuilder.service.getTopAnimeList()
             val body = res.execute().body()
             if(body != null){
-                println("body no null size:" +body.data.size)
+                println("body no null size:" +body.get(1).episodes)
             }
             else{
                 println("body null")
@@ -75,12 +75,7 @@ class MainScreenFragment : Fragment() {
     }
 
     private fun getAnimeList(): List<Anime>{
-        var aniList = listOf(
-            Anime("Fullmetal Alchemist: Brotherhood", " Action, Adventure, Drama, Fantasy","https://cdn.myanimelist.net/images/anime/1223/96541.jpg","#10"),
-            Anime("Fairy Tail", "aventura","hola","4"),
-            Anime("Death Note", "Drama","hola","4")
-        )
-        return aniList
+        return emptyList()
     }
 
     companion object {

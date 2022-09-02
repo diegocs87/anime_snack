@@ -30,14 +30,14 @@ class MainRecyclerAdapter(private val animes: List<Anime>, private val animeItem
         RecyclerView.ViewHolder(cardViewBinding.root) {
 
         fun setAnimeDataCard (animeId: Anime){
-            cardViewBinding.animeTittle.text = animeId.tittle
-            cardViewBinding.kindTV.text = animeId.kind
-            cardViewBinding.capitulostv.text = animeId.score
-            Glide
-                .with(cardViewBinding.root.context)
-                .load(animeId.cover)
-                .centerCrop()
-                .into(cardViewBinding.imgAnime);
+//            cardViewBinding.animeTittle.text = animeId.tittle
+//            cardViewBinding.kindTV.text = animeId.kind
+//            cardViewBinding.capitulostv.text = animeId.score
+//            Glide
+//                .with(cardViewBinding.root.context)
+//                .load(animeId.cover)
+//                .centerCrop()
+//                .into(cardViewBinding.imgAnime);
         }
     }
 }
