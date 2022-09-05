@@ -10,7 +10,7 @@ import com.example.anime_guia.model.Anime
 
 class MainRecyclerAdapter(private val animes: List<Anime>, private val animeItemClickedListener: (Anime) -> Unit) : Adapter<MainRecyclerAdapter.CardHolder>() {
 
-    lateinit var cardViewItemBinding:AnimeCardViewItemBinding;
+    lateinit var cardViewItemBinding:AnimeCardViewItemBinding
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardHolder {
         cardViewItemBinding = AnimeCardViewItemBinding.inflate(LayoutInflater.from(parent.context),

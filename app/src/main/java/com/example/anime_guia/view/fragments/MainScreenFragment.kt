@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.anime_guia.databinding.FragmentMainScreenBinding
 import com.example.anime_guia.model.Anime
-import com.example.anime_guia.model.network.MovieAPIBuilder
+import com.example.anime_guia.model.network.AnimeAPIBuilder
 import com.example.anime_guia.view.ShowAnimeDetailActivity
 import com.example.anime_guia.view.adapters.MainRecyclerAdapter
 import kotlin.concurrent.thread
@@ -50,13 +50,13 @@ class MainScreenFragment : Fragment() {
         Fragmentbinding!!.mainScreenRecycler.adapter = MainRecyclerAdapter(
             getAnimeList()
         ) { anime ->
-            navigateTo(anime)
+            navigateTo()
         };
         arguments?.takeIf { it.containsKey(ARG_OBJECT) }?.apply {
             //Fragmentbinding!!.fragment1tv.text = "freagment id: " + getInt(ARG_OBJECT).toString()
         }
         thread {
-            val res = MovieAPIBuilder.service.getTopAnimeList()
+            val res = AnimeAPIBuilder.service.getTopAnimeList()
             val body = res.execute().body()
             if(body != null){
                 println("body no null size:" +body.get(1).episodes)
@@ -69,7 +69,7 @@ class MainScreenFragment : Fragment() {
         // Inflate the layout for this fragment
     }
 
-    private fun navigateTo(anime: Anime){
+    private fun navigateTo(){
         val intent = Intent(context, ShowAnimeDetailActivity::class.java)
         startActivity(intent)
     }
